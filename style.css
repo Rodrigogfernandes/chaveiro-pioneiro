@@ -1,0 +1,679 @@
+/* ==========================================================================
+   Chaveiro Pioneiro — Estilo Visual Moderno & Premium
+   Desde 1986 · Segurança, confiança e maestria
+   ========================================================================== */
+
+:root {
+    --bg: #0a0a0a;
+    --bg2: #141210;
+    --card: #17140f;
+    --card-hover: #1e1a13;
+    --gold: #f5c518;
+    --gold2: #c99a0b;
+    --gold3: #ffe27a;
+    --gold-glow: rgba(245, 197, 24, 0.28);
+    --gold-gradient: linear-gradient(180deg, var(--gold3), var(--gold) 45%, var(--gold2));
+    --text: #f4f1ea;
+    --muted: #b9b2a3;
+    --line: rgba(245, 197, 24, 0.22);
+    --line-active: rgba(245, 197, 24, 0.55);
+    box-sizing: border-box;
+    padding-top: env(safe-area-inset-top, 0px);
+    padding-bottom: env(safe-area-inset-bottom, 0px);
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 72px;
+    background: var(--bg);
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--text);
+    font-family: 'Montserrat', system-ui, -apple-system, Segoe UI, Arial, sans-serif;
+    line-height: 1.6;
+    overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+    transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.wrap {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 24px;
+}
+
+/* Tipografia de Destaque Dourada */
+.gold {
+    background: linear-gradient(180deg, var(--gold3), var(--gold) 45%, var(--gold2));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    display: inline-block;
+}
+
+/* Header Fixo com Efeito de Vidro */
+header {
+    position: sticky;
+    top: env(safe-area-inset-top, 0px);
+    z-index: 40;
+    background: rgba(10, 10, 10, 0.88);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--line);
+    transition: all 0.3s ease;
+}
+
+header .wrap {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 64px;
+}
+
+.brand {
+    font-weight: 900;
+    letter-spacing: .05em;
+    text-transform: uppercase;
+    font-size: 16px;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    text-shadow: 0 2px 10px rgba(245, 197, 24, 0.2);
+}
+
+.brand:hover {
+    filter: brightness(1.15);
+}
+
+/* Botões */
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 13px 26px;
+    border-radius: 999px;
+    font-weight: 700;
+    font-size: 15px;
+    border: 1px solid var(--gold);
+    transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+    cursor: pointer;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.4);
+}
+
+.btn:hover {
+    transform: translateY(-3px);
+}
+
+.btn-gold {
+    background: linear-gradient(180deg, var(--gold3), var(--gold) 50%, var(--gold2));
+    color: #1a1300;
+    font-weight: 800;
+    box-shadow: 0 8px 26px rgba(245, 197, 24, 0.32), inset 0 1px 0 rgba(255, 255, 255, 0.4);
+}
+
+.btn-gold:hover {
+    box-shadow: 0 12px 34px rgba(245, 197, 24, 0.48), inset 0 1px 0 rgba(255, 255, 255, 0.6);
+    filter: brightness(1.05);
+    color: #000;
+}
+
+.btn-out {
+    color: var(--gold);
+    background: rgba(245, 197, 24, 0.05);
+    border-color: rgba(245, 197, 24, 0.45);
+    backdrop-filter: blur(6px);
+}
+
+.btn-out:hover {
+    background: rgba(245, 197, 24, 0.15);
+    border-color: var(--gold);
+    color: #fff;
+    box-shadow: 0 8px 24px rgba(245, 197, 24, 0.2);
+}
+
+.btn-sm {
+    padding: 8px 18px;
+    font-size: 13px;
+    font-weight: 700;
+}
+
+/* ==========================================================================
+   HERO SECTION — Com o Novo Plano de Fundo (image/image.png)
+   ========================================================================== */
+.hero {
+    position: relative;
+    text-align: center;
+    padding: 56px 0 72px;
+    background: radial-gradient(ellipse at 50% 0, rgba(245, 197, 24, 0.2), transparent 65%), var(--bg);
+    overflow: hidden;
+}
+
+/* Imagem de Fundo aplicada a partir da pasta image */
+.hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image: url('image/image.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: 0.38;
+    filter: contrast(1.1) brightness(0.85);
+    -webkit-mask-image: linear-gradient(to bottom, #000 30%, transparent 95%);
+    mask-image: linear-gradient(to bottom, #000 30%, transparent 95%);
+    z-index: 0;
+    pointer-events: none;
+}
+
+.hero::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 120px;
+    background: linear-gradient(transparent, var(--bg));
+    z-index: 1;
+    pointer-events: none;
+}
+
+.hero .wrap {
+    position: relative;
+    z-index: 2;
+}
+
+.hero svg {
+    width: min(200px, 48vw);
+    height: auto;
+    margin: 0 auto;
+    filter: drop-shadow(0 12px 32px rgba(245, 197, 24, 0.42));
+    animation: floating 4s ease-in-out infinite;
+}
+
+@keyframes floating {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-6px);
+    }
+}
+
+.tag {
+    font-family: 'Dancing Script', cursive, serif;
+    font-size: clamp(24px, 5vw, 34px);
+    color: var(--gold);
+    margin: 8px 0 0;
+    text-shadow: 0 2px 12px rgba(245, 197, 24, 0.3);
+}
+
+h1 {
+    margin: 6px 0 0;
+    font-weight: 900;
+    line-height: .96;
+    text-transform: uppercase;
+    font-size: clamp(46px, 12vw, 110px);
+    letter-spacing: -.02em;
+}
+
+h1 .w {
+    display: block;
+    background: linear-gradient(180deg, #fff, #cfcfcf 55%, #8d8d8d);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    text-shadow: 0 8px 24px rgba(0, 0, 0, 0.6);
+}
+
+.since {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    justify-content: center;
+    margin: 18px auto 22px;
+    letter-spacing: .45em;
+    font-weight: 700;
+    color: #e5e5e5;
+    font-size: clamp(13px, 3vw, 20px);
+    text-transform: uppercase;
+}
+
+.since::before,
+.since::after {
+    content: "";
+    height: 2px;
+    width: clamp(30px, 10vw, 120px);
+    background: linear-gradient(90deg, transparent, var(--gold));
+}
+
+.since::after {
+    transform: scaleX(-1);
+}
+
+.lead {
+    max-width: 640px;
+    margin: 0 auto 30px;
+    color: var(--muted);
+    font-size: clamp(15px, 2.4vw, 18px);
+    font-weight: 500;
+    line-height: 1.65;
+}
+
+.cta-row {
+    display: flex;
+    gap: 14px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+/* Responsividade Desktop para o Hero */
+@media(min-width: 900px) {
+    .hero {
+        padding: 76px 0 88px;
+        text-align: left;
+    }
+
+    .hero::before {
+        left: auto;
+        right: 0;
+        width: 56%;
+        opacity: 0.85;
+        background-position: center center;
+        -webkit-mask-image: linear-gradient(to right, transparent 0, #000 50%);
+        mask-image: linear-gradient(to right, transparent 0, #000 50%);
+    }
+
+    .hero .wrap {
+        padding-right: 44%;
+    }
+
+    .hero svg {
+        display: block;
+        margin: 0;
+    }
+
+    .hero h1 {
+        font-size: clamp(56px, 7.2vw, 88px);
+    }
+
+    .hero .since {
+        justify-content: flex-start;
+        margin-left: 0;
+        letter-spacing: .35em;
+    }
+
+    .hero .since::before {
+        display: none;
+    }
+
+    .hero .lead {
+        margin-left: 0;
+    }
+
+    .hero .cta-row {
+        justify-content: flex-start;
+    }
+}
+
+/* ==========================================================================
+   SEÇÕES GERAIS & SERVIÇOS
+   ========================================================================== */
+section {
+    padding: 72px 0;
+    position: relative;
+}
+
+h2 {
+    text-align: center;
+    font-size: clamp(28px, 5.2vw, 40px);
+    margin: 0 0 10px;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: -0.01em;
+}
+
+.sub {
+    text-align: center;
+    color: var(--muted);
+    margin: 0 auto 42px;
+    max-width: 580px;
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+/* Grid de Cards de Serviços Moderno */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 20px;
+}
+
+.card {
+    background: linear-gradient(160deg, rgba(23, 20, 15, 0.85), rgba(13, 11, 8, 0.95));
+    border: 1px solid var(--line);
+    border-radius: 20px;
+    padding: 30px 24px;
+    text-align: center;
+    transition: all 0.28s cubic-bezier(0.16, 1, 0.3, 1);
+    box-shadow: 0 10px 28px rgba(0, 0, 0, 0.5), inset 0 1px 0 rgba(255, 255, 255, 0.05);
+    position: relative;
+    overflow: hidden;
+}
+
+.card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, var(--gold), transparent);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-6px);
+    border-color: var(--line-active);
+    box-shadow: 0 16px 38px rgba(0, 0, 0, 0.7), 0 0 24px rgba(245, 197, 24, 0.18);
+    background: linear-gradient(160deg, rgba(30, 26, 19, 0.95), rgba(17, 14, 10, 0.98));
+}
+
+.card:hover::before {
+    opacity: 1;
+}
+
+.ico {
+    width: 72px;
+    height: 72px;
+    margin: 0 auto 16px;
+    border-radius: 50%;
+    border: 1.5px solid var(--gold);
+    display: grid;
+    place-items: center;
+    font-size: 32px;
+    background: radial-gradient(circle, rgba(245, 197, 24, 0.12), transparent 70%);
+    box-shadow: 0 0 18px rgba(245, 197, 24, 0.15), inset 0 0 12px rgba(245, 197, 24, 0.15);
+    transition: all 0.3s ease;
+}
+
+.card:hover .ico {
+    transform: scale(1.08) rotate(3deg);
+    box-shadow: 0 0 25px rgba(245, 197, 24, 0.35), inset 0 0 16px rgba(245, 197, 24, 0.25);
+    border-color: var(--gold3);
+}
+
+.card h3 {
+    margin: 0 0 8px;
+    font-size: 17px;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: .03em;
+    color: var(--text);
+    transition: color 0.25s ease;
+}
+
+.card:hover h3 {
+    color: var(--gold3);
+}
+
+.card p {
+    margin: 0;
+    color: var(--muted);
+    font-size: 14px;
+    line-height: 1.55;
+}
+
+/* ==========================================================================
+   FAIXA DE CONFIANÇA & ESTATÍSTICAS
+   ========================================================================== */
+.band {
+    background: var(--bg2);
+    border-block: 1px solid var(--line);
+    position: relative;
+    overflow: hidden;
+}
+
+.band::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle at center, rgba(245, 197, 24, 0.06), transparent 70%);
+    pointer-events: none;
+}
+
+.trust {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 24px;
+    text-align: center;
+    padding: 12px 0;
+}
+
+.trust > div {
+    padding: 16px;
+    border-radius: 14px;
+    transition: all 0.25s ease;
+}
+
+.trust > div:hover {
+    background: rgba(245, 197, 24, 0.04);
+    transform: translateY(-2px);
+}
+
+.trust b {
+    display: block;
+    font-size: 38px;
+    font-weight: 900;
+    line-height: 1.1;
+    margin-bottom: 4px;
+}
+
+.trust span {
+    color: var(--muted);
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: .08em;
+    font-weight: 600;
+}
+
+/* ==========================================================================
+   SEÇÃO SOBRE NÓS
+   ========================================================================== */
+.about {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+    color: var(--muted);
+    font-size: 17px;
+    line-height: 1.75;
+    background: rgba(23, 20, 15, 0.4);
+    border: 1px solid rgba(245, 197, 24, 0.15);
+    border-radius: 24px;
+    padding: 42px 32px;
+    backdrop-filter: blur(8px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+}
+
+.about h2 {
+    margin-bottom: 18px;
+}
+
+.about strong {
+    color: var(--text);
+    font-weight: 700;
+}
+
+/* ==========================================================================
+   SEÇÃO DE CONTATO & LOCALIZAÇÃO
+   ========================================================================== */
+#contato {
+    padding-top: 20px;
+}
+
+.contact {
+    border: 1.5px solid var(--gold);
+    border-radius: 28px;
+    padding: 40px 32px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 36px;
+    background: #0d0b08;
+    box-shadow: 0 0 45px rgba(245, 197, 24, 0.12), inset 0 1px 0 rgba(255, 255, 255, 0.06);
+    position: relative;
+}
+
+.contact h3 {
+    margin: 0 0 10px;
+    font-size: 14px;
+    color: var(--muted);
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: .06em;
+}
+
+.phone {
+    font-size: clamp(28px, 5.5vw, 42px);
+    font-weight: 900;
+    margin: 0 0 18px;
+    display: inline-block;
+    transition: transform 0.2s ease;
+    line-height: 1.1;
+}
+
+.phone:hover {
+    transform: translateX(4px);
+}
+
+.addr {
+    font-size: 20px;
+    font-weight: 800;
+    margin: 0;
+    color: var(--text);
+}
+
+.addr small {
+    display: block;
+    color: var(--muted);
+    font-weight: 500;
+    font-size: 15px;
+    margin-top: 4px;
+    margin-bottom: 20px;
+}
+
+@media(max-width: 768px) {
+    .contact {
+        grid-template-columns: 1fr;
+        text-align: center;
+        padding: 32px 20px;
+        gap: 30px;
+    }
+}
+
+/* ==========================================================================
+   RODAPÉ
+   ========================================================================== */
+footer {
+    padding: 32px 0 96px;
+    text-align: center;
+    color: var(--muted);
+    font-size: 13px;
+    line-height: 1.6;
+    border-top: 1px solid var(--line);
+    background: #060606;
+}
+
+/* ==========================================================================
+   BOTÃO FLUTUANTE DO WHATSAPP (FAB)
+   ========================================================================== */
+.fab {
+    position: fixed;
+    right: 18px;
+    bottom: calc(18px + env(safe-area-inset-bottom, 0px));
+    z-index: 50;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 8px 22px 8px 8px;
+    border-radius: 999px;
+    background: linear-gradient(180deg, #2fe074, #17a34a);
+    color: #fff;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.2;
+    border: 1px solid rgba(255, 255, 255, .35);
+    box-shadow: 0 10px 28px rgba(0, 0, 0, .55), 0 0 20px rgba(47, 224, 116, 0.35);
+    transition: transform .18s ease, box-shadow .18s ease;
+}
+
+.fab:hover {
+    transform: translateY(-3px) scale(1.02);
+    box-shadow: 0 14px 36px rgba(0, 0, 0, .65), 0 0 28px rgba(47, 224, 116, 0.55);
+    color: #fff;
+}
+
+.fab .ic {
+    position: relative;
+    width: 46px;
+    height: 46px;
+    border-radius: 50%;
+    background: #fff;
+    display: grid;
+    place-items: center;
+    flex: none;
+}
+
+.fab .ic::after {
+    content: "";
+    position: absolute;
+    inset: -3px;
+    border-radius: 50%;
+    border: 2px solid #25d366;
+    animation: ping 2s cubic-bezier(0, 0, 0.2, 1) infinite;
+}
+
+.fab svg {
+    width: 26px;
+    height: 26px;
+    fill: #17a34a;
+}
+
+.fab small {
+    display: block;
+    font-weight: 500;
+    font-size: 11px;
+    opacity: .92;
+}
+
+@keyframes ping {
+    0% {
+        transform: scale(1);
+        opacity: .9;
+    }
+    75%, 100% {
+        transform: scale(1.6);
+        opacity: 0;
+    }
+}
+
+@media(prefers-reduced-motion: reduce) {
+    .fab .ic::after,
+    .hero svg {
+        animation: none !important;
+    }
+}
