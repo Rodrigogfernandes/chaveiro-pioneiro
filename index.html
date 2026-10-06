@@ -4,133 +4,507 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-    <title>Chaveiro Pioneiro — Segurança e confiança desde 1986</title>
+    <title>Chaveiro Pioneiro — Segurança e confiança desde 1986 | João Pessoa/PB</title>
+    <meta name="description"
+        content="Chaveiro Pioneiro em João Pessoa/PB. Cópias de chaves, abertura de portas, chaves automotivas, cofres e cadeados. Atendimento rápido e de confiança desde 1986.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="icon" href="favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="style.css">
     <link
-        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700;900&family=Dancing+Script:wght@700&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&family=Dancing+Script:wght@700&display=swap"
         rel="stylesheet">
 </head>
 
 <body>
-    <header>
-        <div class="wrap"><a href="#topo" class="brand gold">Chaveiro Pioneiro</a><a class="btn btn-gold btn-sm"
-                href="https://wa.me/5583987432859" target="_blank" rel="noopener">WhatsApp</a></div>
-    </header>
-
-    <main id="topo">
-        <div class="hero">
-            <div class="wrap">
-                <svg viewBox="0 0 200 190" aria-hidden="true">
+    <!-- ═══ HEADER ═══ -->
+    <header id="header">
+        <div class="wrap header-inner">
+            <a href="#topo" class="brand gold" aria-label="Chaveiro Pioneiro - Início">
+                <svg class="brand-icon" viewBox="0 0 32 32" aria-hidden="true">
                     <defs>
-                        <linearGradient id="g" x1="0" y1="0" x2="0" y2="1">
+                        <linearGradient id="hg" x1="0" y1="0" x2="0" y2="1">
                             <stop offset="0" stop-color="#ffe27a" />
                             <stop offset=".5" stop-color="#f5c518" />
                             <stop offset="1" stop-color="#b8860b" />
                         </linearGradient>
                     </defs>
-                    <path d="M62 84V56a38 38 0 0 1 76 0v28" fill="none" stroke="url(#g)" stroke-width="16"
+                    <path d="M10 14V9a6 6 0 0 1 12 0v5" fill="none" stroke="url(#hg)" stroke-width="2.5"
                         stroke-linecap="round" />
-                    <rect x="34" y="80" width="132" height="98" rx="20" fill="url(#g)" />
-                    <path d="M100 104a13 13 0 0 0-6 24l-4 28h20l-4-28a13 13 0 0 0-6-24z" fill="#0a0a0a" />
+                    <rect x="5" y="13" width="22" height="16" rx="3.5" fill="url(#hg)" />
+                    <path d="M16 17a2 2 0 0 0-1 3.7l-.7 4.3h3.4l-.7-4.3A2 2 0 0 0 16 17z" fill="#0a0a0a" />
                 </svg>
-                <p class="tag">Segurança e confiança em cada serviço!</p>
-                <h1><span class="w">Chaveiro</span><span class="gold">Pioneiro</span></h1>
-                <div class="since">DESDE 1986</div>
-                <p class="lead">Precisou de um chaveiro de confiança? Experiência, segurança e qualidade em serviços
-                    residenciais, comerciais e automotivos.</p>
-                <div class="cta-row"><a class="btn btn-gold" href="https://wa.me/5583987432859" target="_blank"
-                        rel="noopener">💬 Chamar no WhatsApp</a><a class="btn btn-out" href="tel:+5583987432859">📞
-                        Ligar agora</a></div>
+                <span>Chaveiro <strong>Pioneiro</strong></span>
+            </a>
+
+            <nav class="nav-desktop" aria-label="Navegação principal">
+                <a href="#servicos" class="nav-link">Serviços</a>
+                <a href="#galeria" class="nav-link">Galeria</a>
+                <a href="#sobre" class="nav-link">Sobre</a>
+                <a href="#contato" class="nav-link">Contato</a>
+            </nav>
+
+            <div class="header-actions">
+                <a class="btn btn-gold btn-sm" href="https://wa.me/5583987432859" target="_blank" rel="noopener">💬
+                    WhatsApp</a>
+                <button class="hamburger" id="hamburger" aria-label="Abrir menu" aria-expanded="false"
+                    aria-controls="mobile-menu">
+                    <span></span><span></span><span></span>
+                </button>
             </div>
         </div>
 
-        <section id="servicos">
+        <!-- Mobile Menu -->
+        <div class="mobile-menu" id="mobile-menu" aria-hidden="true">
+            <nav aria-label="Navegação mobile">
+                <a href="#servicos" class="mobile-nav-link" data-close>🔑 Serviços</a>
+                <a href="#galeria" class="mobile-nav-link" data-close>📸 Galeria</a>
+                <a href="#sobre" class="mobile-nav-link" data-close>🏆 Sobre nós</a>
+                <a href="#contato" class="mobile-nav-link" data-close>📍 Contato</a>
+            </nav>
+            <div class="mobile-menu-cta">
+                <a class="btn btn-gold" href="https://wa.me/5583987432859" target="_blank" rel="noopener" data-close>💬
+                    Chamar no WhatsApp</a>
+                <a class="btn btn-out" href="tel:+5583987432859" data-close>📞 Ligar agora</a>
+            </div>
+        </div>
+    </header>
+
+    <main id="topo">
+
+        <!-- ═══ HERO ═══ -->
+        <section class="hero" aria-label="Apresentação">
+            <div class="hero-bg" aria-hidden="true"></div>
+            <div class="hero-overlay" aria-hidden="true"></div>
+            <div class="hero-gradient-bottom" aria-hidden="true"></div>
+
+            <div class="wrap hero-content">
+                <div class="hero-text">
+                    <div class="hero-badge">
+                        <span class="badge-dot"></span>
+                        Atendimento disponível agora
+                    </div>
+
+                    <p class="tag">Segurança e confiança em cada serviço!</p>
+
+                    <h1>
+                        <span class="h1-word">Chaveiro</span>
+                        <span class="h1-word gold">Pioneiro</span>
+                    </h1>
+
+                    <div class="since">DESDE 1986</div>
+
+                    <p class="lead">Precisou de um chaveiro de confiança? Experiência, segurança e qualidade em serviços
+                        <strong>residenciais, comerciais e automotivos</strong> em João Pessoa/PB.
+                    </p>
+
+                    <div class="cta-row">
+                        <a class="btn btn-gold btn-lg" href="https://wa.me/5583987432859" target="_blank"
+                            rel="noopener">
+                            <svg viewBox="0 0 24 24" aria-hidden="true" class="btn-icon">
+                                <path
+                                    d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z" />
+                            </svg>
+                            Chamar no WhatsApp
+                        </a>
+                        <a class="btn btn-out btn-lg" href="tel:+5583987432859">📞 Ligar agora</a>
+                    </div>
+
+                    <div class="hero-stats">
+                        <div class="hstat">
+                            <span class="hstat-num gold">+38</span>
+                            <span class="hstat-label">Anos de<br>experiência</span>
+                        </div>
+                        <div class="hstat-divider" aria-hidden="true"></div>
+                        <div class="hstat">
+                            <span class="hstat-num gold">⚡</span>
+                            <span class="hstat-label">Atendimento<br>rápido</span>
+                        </div>
+                        <div class="hstat-divider" aria-hidden="true"></div>
+                        <div class="hstat">
+                            <span class="hstat-num gold">🤝</span>
+                            <span class="hstat-label">Serviço<br>garantido</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="hero-visual" aria-hidden="true">
+                    <div class="lock-glow"></div>
+                    <svg class="lock-svg" viewBox="0 0 200 190" aria-hidden="true">
+                        <defs>
+                            <linearGradient id="g" x1="0" y1="0" x2="0" y2="1">
+                                <stop offset="0" stop-color="#ffe27a" />
+                                <stop offset=".5" stop-color="#f5c518" />
+                                <stop offset="1" stop-color="#b8860b" />
+                            </linearGradient>
+                        </defs>
+                        <path d="M62 84V56a38 38 0 0 1 76 0v28" fill="none" stroke="url(#g)" stroke-width="16"
+                            stroke-linecap="round" />
+                        <rect x="34" y="80" width="132" height="98" rx="20" fill="url(#g)" />
+                        <path d="M100 104a13 13 0 0 0-6 24l-4 28h20l-4-28a13 13 0 0 0-6-24z" fill="#0a0a0a" />
+                    </svg>
+                </div>
+            </div>
+        </section>
+
+        <!-- ═══ FAIXA DE CONFIANÇA ═══ -->
+        <div class="band" role="region" aria-label="Diferenciais">
+            <div class="wrap trust">
+                <div class="trust-item">
+                    <b class="gold">1986</b>
+                    <span>Tradição e experiência</span>
+                </div>
+                <div class="trust-sep" aria-hidden="true"></div>
+                <div class="trust-item">
+                    <b class="gold">⚡</b>
+                    <span>Atendimento rápido</span>
+                </div>
+                <div class="trust-sep" aria-hidden="true"></div>
+                <div class="trust-item">
+                    <b class="gold">🔒</b>
+                    <span>Serviços garantidos</span>
+                </div>
+                <div class="trust-sep" aria-hidden="true"></div>
+                <div class="trust-item">
+                    <b class="gold">🤝</b>
+                    <span>Qualidade e confiança</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- ═══ SERVIÇOS ═══ -->
+        <section id="servicos" aria-labelledby="servicos-titulo">
             <div class="wrap">
-                <h2 class="gold">Nossos serviços</h2>
-                <p class="sub">Soluções completas para sua casa, seu comércio e seu carro.</p>
+                <div class="section-header">
+                    <span class="section-label">O que fazemos</span>
+                    <h2 id="servicos-titulo" class="gold">Nossos serviços</h2>
+                    <p class="sub">Soluções completas para sua casa, seu comércio e seu carro.</p>
+                </div>
+
                 <div class="grid">
-                    <div class="card">
-                        <div class="ico">🔑</div>
-                        <h3>Cópias de chaves</h3>
-                        <p>Simples e codificadas, com precisão.</p>
-                    </div>
-                    <div class="card">
-                        <div class="ico">🚗</div>
-                        <h3>Chaves de carro</h3>
-                        <p>Chaves automotivas para o seu veículo.</p>
-                    </div>
-                    <div class="card">
-                        <div class="ico">🚪</div>
-                        <h3>Abertura de portas</h3>
-                        <p>Residenciais, comerciais e automotivas.</p>
-                    </div>
-                    <div class="card">
-                        <div class="ico">🔐</div>
-                        <h3>Cofres e cadeados</h3>
-                        <p>Abertura de cofres e serviço em cadeados.</p>
-                    </div>
-                    <div class="card">
-                        <div class="ico">🛠️</div>
-                        <h3>Afiação de alicate</h3>
-                        <p>Afiação e reposição da mola.</p>
-                    </div>
+                    <article class="card" tabindex="0">
+                        <div class="card-glow" aria-hidden="true"></div>
+                        <div class="card-media">
+                            <img src="servico-copias.jpg" alt="Máquina cortando e duplicando chave" loading="lazy"
+                                width="600" height="338">
+                            <div class="card-badge" aria-hidden="true"></div>
+                        </div>
+                        <div class="card-body">
+                            <h3>Cópias de chaves</h3>
+                            <p>Chaves simples e codificadas, com corte computadorizado e acabamento de alta precisão.
+                            </p>
+                            <span class="card-tag">Residencial & Automotivo</span>
+                        </div>
+                        <div class="card-arrow" aria-hidden="true">→</div>
+                    </article>
+
+                    <article class="card" tabindex="0">
+                        <div class="card-glow" aria-hidden="true"></div>
+                        <div class="card-media">
+                            <img src="servico-automotivo.jpg" alt="Chaveiro programando chave automotiva codificada"
+                                loading="lazy" width="600" height="338">
+                            <div class="card-badge" aria-hidden="true"></div>
+                        </div>
+                        <div class="card-body">
+                            <h3>Chaves automotivas</h3>
+                            <p>Chaves canivete, com transponder, telecomando e clonagem eletrônica para todas as marcas.
+                            </p>
+                            <span class="card-tag">Nacionais & Importados</span>
+                        </div>
+                        <div class="card-arrow" aria-hidden="true">→</div>
+                    </article>
+
+                    <article class="card" tabindex="0">
+                        <div class="card-glow" aria-hidden="true"></div>
+                        <div class="card-media">
+                            <img src="servico-abertura.jpg" style="height: 200px;"
+                                alt="Abertura técnica de fechadura residencial" loading="lazy" width="600" height="200">
+                            <div class="card-badge" aria-hidden="true"></div>
+                        </div>
+                        <div class="card-body">
+                            <h3>Abertura de portas</h3>
+                            <p>Abertura emergencial residencial, comercial e veicular. Rápido, sem danos e sem
+                                burocracia.</p>
+                            <span class="card-tag">Sem Danos à Porta</span>
+                        </div>
+                        <div class="card-arrow" aria-hidden="true">→</div>
+                    </article>
+
+                    <article class="card" tabindex="0">
+                        <div class="card-glow" aria-hidden="true"></div>
+                        <div class="card-media">
+                            <img src="servico-cofres.jpg" alt="Manutenção e segredo de cofres e cadeados pesados"
+                                loading="lazy" width="600" height="338">
+                            <div class="card-badge" aria-hidden="true"></div>
+                        </div>
+                        <div class="card-body">
+                            <h3>Cofres e cadeados</h3>
+                            <p>Abertura técnica, troca de combinações, reparo e reposição de segredos para cofres e
+                                cadeados.</p>
+                            <span class="card-tag">Máxima Segurança</span>
+                        </div>
+                        <div class="card-arrow" aria-hidden="true">→</div>
+                    </article>
+
+                    <article class="card" tabindex="0">
+                        <div class="card-glow" aria-hidden="true"></div>
+                        <div class="card-media">
+                            <img src="servico-afiacao.jpg" alt="Afiação profissional de alicate de manicure"
+                                loading="lazy" width="600" height="338">
+                            <div class="card-badge" aria-hidden="true"></div>
+                        </div>
+                        <div class="card-body">
+                            <h3>Afiação de alicate</h3>
+                            <p>Afiação em rebolo especial para corte suave e preciso, troca de mola e ajuste fino de
+                                alicates.</p>
+                            <span class="card-tag">Corte Cirúrgico</span>
+                        </div>
+                        <div class="card-arrow" aria-hidden="true">→</div>
+                    </article>
+
+                    <article class="card card-cta" tabindex="0">
+                        <div class="card-glow" aria-hidden="true"></div>
+                        <div class="card-cta-inner">
+                            <div class="ico">💬</div>
+                            <h3>Precisa de ajuda imediata?</h3>
+                            <p>Fale agora pelo WhatsApp e resolva seu problema com rapidez e segurança.</p>
+                            <a class="btn btn-gold btn-sm card-btn"
+                                href="https://wa.me/5583987432859?text=Ol%C3%A1!%20Preciso%20de%20um%20chaveiro."
+                                target="_blank" rel="noopener">Chamar no WhatsApp</a>
+                        </div>
+                    </article>
                 </div>
             </div>
         </section>
 
-        <div class="band">
-            <section>
-                <div class="wrap trust">
-                    <div><b class="gold">1986</b><span>Tradição desde</span></div>
-                    <div><b class="gold">⚡</b><span>Atendimento rápido</span></div>
-                    <div><b class="gold">🤝</b><span>Qualidade e confiança</span></div>
-                </div>
-            </section>
-        </div>
-
-        <section id="sobre">
-            <div class="wrap about">
-                <h2 class="gold">Pioneiros em segurança</h2>
-                <p>Há <strong>mais de três décadas</strong> cuidando da segurança de famílias e empresas em João Pessoa.
-                    Aqui você encontra <strong>experiência, agilidade e atendimento de confiança</strong> — do reparo
-                    mais simples à abertura mais delicada.</p>
-            </div>
-        </section>
-
-        <section id="contato">
+        <!-- ═══ GALERIA ═══ -->
+        <section id="galeria" aria-labelledby="galeria-titulo">
             <div class="wrap">
-                <h2 class="gold">Fale com a gente</h2>
-                <p class="sub">Ligue ou chame no WhatsApp. Atendemos você com rapidez.</p>
-                <div class="contact">
-                    <div>
-                        <h3>Ligue ou chame no WhatsApp</h3><a class="phone gold" href="tel:+5583987432859">(83)
-                            98743-2859</a><a class="btn btn-gold" href="https://wa.me/5583987432859" target="_blank"
-                            rel="noopener">💬 Chamar agora</a>
+                <div class="section-header">
+                    <span class="section-label">Nosso trabalho</span>
+                    <h2 id="galeria-titulo" class="gold">Galeria de serviços</h2>
+                    <p class="sub">Conheça de perto o padrão e a precisão do trabalho realizado pelo Chaveiro Pioneiro.
+                    </p>
+                </div>
+
+                <div class="gallery">
+                    <figure class="gallery-item">
+                        <img src="servico-copias.jpg" alt="Máquina de corte e cópia de chave de precisão" loading="lazy"
+                            width="600" height="400">
+                        <figcaption>
+                            <span class="gallery-tag">Cópias de chaves</span>
+                            <p>Corte computadorizado e réplica perfeita</p>
+                        </figcaption>
+                    </figure>
+                    <figure class="gallery-item">
+                        <img src="servico-automotivo.jpg" alt="Codificação de chaves automotivas e transponder"
+                            loading="lazy" width="600" height="400">
+                        <figcaption>
+                            <span class="gallery-tag">Chaves automotivas</span>
+                            <p>Programação eletrônica e chaves canivete</p>
+                        </figcaption>
+                    </figure>
+                    <figure class="gallery-item">
+                        <img src="servico-abertura.jpg" alt="Abertura técnica de portas sem arrombamento" loading="lazy"
+                            width="600" height="400">
+                        <figcaption>
+                            <span class="gallery-tag">Abertura de portas</span>
+                            <p>Técnica especializada sem avarias na porta</p>
+                        </figcaption>
+                    </figure>
+                    <figure class="gallery-item">
+                        <img src="servico-cofres.jpg" alt="Manutenção e segredos em cofres e cadeados" loading="lazy"
+                            width="600" height="400">
+                        <figcaption>
+                            <span class="gallery-tag">Cofres e cadeados</span>
+                            <p>Reparo, abertura e troca de segredo</p>
+                        </figcaption>
+                    </figure>
+                    <figure class="gallery-item">
+                        <img src="servico-afiacao.jpg" alt="Afiação artesanal de alicates de cutícula" loading="lazy"
+                            width="600" height="400">
+                        <figcaption>
+                            <span class="gallery-tag">Afiação de alicates</span>
+                            <p>Corte cirúrgico em rebolo diamantado</p>
+                        </figcaption>
+                    </figure>
+                    <figure class="gallery-item">
+                        <img src="copia-chave.jpg" alt="Oficina Chaveiro Pioneiro em funcionamento" loading="lazy"
+                            width="600" height="400">
+                        <figcaption>
+                            <span class="gallery-tag">⭐ Desde 1986</span>
+                            <p>Tradição e excelência em João Pessoa</p>
+                        </figcaption>
+                    </figure>
+                </div>
+            </div>
+        </section>
+
+        <!-- ═══ SOBRE ═══ -->
+        <section id="sobre" aria-labelledby="sobre-titulo">
+            <div class="wrap">
+                <div class="about-grid">
+                    <div class="about-visual" aria-hidden="true">
+                        <div class="about-year">
+                            <span class="about-year-num gold">1986</span>
+                            <span class="about-year-label">Fundação</span>
+                        </div>
+                        <div class="about-dec about-dec--1"></div>
+                        <div class="about-dec about-dec--2"></div>
                     </div>
-                    <div>
-                        <h3>📍 Venha nos visitar</h3>
-                        <p class="addr">Av. Josefa Taveira, Nº 1255<small>João Pessoa/PB</small></p><a
-                            class="btn btn-out"
-                            href="https://www.google.com/maps/search/?api=1&query=Av.+Josefa+Taveira+1255+Jo%C3%A3o+Pessoa+PB"
-                            target="_blank" rel="noopener">Ver no mapa</a>
+                    <div class="about-text">
+                        <span class="section-label">Quem somos</span>
+                        <h2 id="sobre-titulo" class="gold">Pioneiros em segurança</h2>
+                        <p>Há <strong>mais de três décadas</strong> cuidando da segurança de famílias e empresas em
+                            João Pessoa. Aqui você encontra <strong>experiência, agilidade e atendimento de
+                                confiança</strong> — do reparo mais simples à abertura mais delicada.</p>
+                        <p>Nossa equipe está sempre pronta para atender você com a <strong>máxima qualidade e
+                                rapidez</strong>, seja qual for a situação.</p>
+                        <div class="about-badges">
+                            <span class="abadge">✅ Profissionais certificados</span>
+                            <span class="abadge">✅ Serviço garantido</span>
+                            <span class="abadge">✅ Preço justo</span>
+                            <span class="abadge">✅ Atendimento rápido</span>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
+
+        <!-- ═══ CONTATO ═══ -->
+        <section id="contato" aria-labelledby="contato-titulo">
+            <div class="wrap">
+                <div class="section-header">
+                    <span class="section-label">Entre em contato</span>
+                    <h2 id="contato-titulo" class="gold">Fale com a gente</h2>
+                    <p class="sub">Ligue ou chame no WhatsApp. Atendemos você com rapidez.</p>
+                </div>
+
+                <div class="contact">
+                    <div class="contact-card contact-card--phone">
+                        <div class="contact-icon">📞</div>
+                        <h3>Ligue ou chame no WhatsApp</h3>
+                        <a class="phone gold" href="tel:+5583987432859">(83) 98743-2859</a>
+                        <div class="contact-btns">
+                            <a class="btn btn-gold" href="https://wa.me/5583987432859" target="_blank" rel="noopener">💬
+                                Chamar agora</a>
+                            <a class="btn btn-out" href="tel:+5583987432859">📞 Ligar</a>
+                        </div>
+                    </div>
+
+                    <div class="contact-card contact-card--address">
+                        <div class="contact-icon">📍</div>
+                        <h3>Venha nos visitar</h3>
+                        <address class="addr">
+                            Av. Josefa Taveira, Nº 1255
+                            <small>João Pessoa / PB</small>
+                        </address>
+                        <a class="btn btn-out"
+                            href="https://www.google.com/maps/search/?api=1&query=Av.+Josefa+Taveira+1255+Jo%C3%A3o+Pessoa+PB"
+                            target="_blank" rel="noopener">🗺️ Ver no mapa</a>
+                    </div>
+
+                    <div class="contact-card contact-card--hours">
+                        <div class="contact-icon">🕐</div>
+                        <h3>Horário de atendimento</h3>
+                        <ul class="hours-list">
+                            <li><span>Seg–Sex</span><strong>08h às 18h</strong></li>
+                            <li><span>Sábado</span><strong>08h às 13h</strong></li>
+                            <li><span>Emergências</span><strong class="gold">WhatsApp</strong></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
     </main>
 
+    <!-- ═══ FOOTER ═══ -->
     <footer>
-        <div class="wrap">💛 Chaveiro Pioneiro — segurança e confiança em cada serviço!<br>© Desde 1986 · Av. Josefa
-            Taveira, 1255 · João Pessoa/PB</div>
+        <div class="wrap footer-inner">
+            <a href="#topo" class="footer-brand gold">Chaveiro Pioneiro</a>
+            <p class="footer-tagline">💛 Segurança e confiança em cada serviço desde 1986</p>
+            <nav class="footer-nav" aria-label="Links do rodapé">
+                <a href="#servicos">Serviços</a>
+                <a href="#galeria">Galeria</a>
+                <a href="#sobre">Sobre</a>
+                <a href="#contato">Contato</a>
+            </nav>
+            <p class="footer-copy">© Desde 1986 · Av. Josefa Taveira, 1255 · João Pessoa/PB</p>
+        </div>
     </footer>
 
+    <!-- ═══ FAB WHATSAPP ═══ -->
     <a class="fab" href="https://wa.me/5583987432859?text=Ol%C3%A1!%20Preciso%20de%20um%20chaveiro." target="_blank"
-        rel="noopener" aria-label="Chamar no WhatsApp"><span class="ic"><svg viewBox="0 0 24 24" aria-hidden="true">
+        rel="noopener" aria-label="Chamar no WhatsApp">
+        <span class="ic">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
                 <path
                     d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z" />
-            </svg></span><span>Chamar no WhatsApp<small>Atendimento rápido</small></span></a>
+            </svg>
+        </span>
+        <span class="fab-text">
+            Chamar no WhatsApp
+            <small>Atendimento rápido</small>
+        </span>
+    </a>
+
+    <!-- ═══ SCRIPTS ═══ -->
+    <script>
+        // ── Hamburger Menu ──
+        const hamburger = document.getElementById('hamburger');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const body = document.body;
+
+        function toggleMenu(open) {
+            hamburger.setAttribute('aria-expanded', open);
+            mobileMenu.setAttribute('aria-hidden', !open);
+            hamburger.classList.toggle('open', open);
+            mobileMenu.classList.toggle('open', open);
+            body.classList.toggle('menu-open', open);
+        }
+
+        hamburger.addEventListener('click', () => {
+            const isOpen = hamburger.getAttribute('aria-expanded') === 'true';
+            toggleMenu(!isOpen);
+        });
+
+        document.querySelectorAll('[data-close]').forEach(el => {
+            el.addEventListener('click', () => toggleMenu(false));
+        });
+
+        document.addEventListener('keydown', e => {
+            if (e.key === 'Escape') toggleMenu(false);
+        });
+
+        // ── Header scroll effect ──
+        const header = document.getElementById('header');
+        let lastScroll = 0;
+
+        window.addEventListener('scroll', () => {
+            const scrollY = window.scrollY;
+            header.classList.toggle('scrolled', scrollY > 20);
+            header.classList.toggle('hidden', scrollY > lastScroll + 5 && scrollY > 200);
+            header.classList.toggle('visible', scrollY < lastScroll - 5);
+            lastScroll = scrollY;
+        }, { passive: true });
+
+        // ── Reveal on scroll ──
+        const revealEls = document.querySelectorAll('.card, .gallery-item, .about-grid, .contact-card, .trust-item, .hstat');
+        const revealObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('revealed');
+                    revealObserver.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.08, rootMargin: '0px 0px -40px 0px' });
+
+        revealEls.forEach((el, i) => {
+            el.style.transitionDelay = `${(i % 4) * 0.07}s`;
+            revealObserver.observe(el);
+        });
+    </script>
 </body>
 
 </html>
